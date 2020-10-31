@@ -59,6 +59,9 @@ namespace Project_COVID_19.Models
         public string Comment { get; set; }
 
         [DataType(DataType.Date), Required]
-        public DateTime Date { get; set; }        
+        public DateTime Date { get; set; }  
+
+        //[ForeignKey("")]
+        //public string UserId { get; set; }     
      }
 }
