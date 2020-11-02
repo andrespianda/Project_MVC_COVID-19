@@ -14,7 +14,7 @@ namespace Project_COVID_19.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me")]
+        [Display(Name = "Recordar Usuario")]
         public bool RememberMe { get; set; }
     }
 }
