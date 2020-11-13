@@ -78,7 +78,7 @@ namespace Project_COVID_19
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Privacy}/{id?}");
             });
         }
     }

@@ -47,7 +47,7 @@ namespace Project_COVID_19.Controllers
         }
 
         // GET: Surveys/Create
-        public IActionResult Create()
+        public IActionResult EncuestaCovid()
         {
             return View();
         }
