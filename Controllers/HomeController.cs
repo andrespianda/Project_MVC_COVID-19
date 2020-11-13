@@ -30,7 +30,7 @@ namespace Project_COVID_19.Controllers
         {
             return View();
         }
-                public IActionResult pruebas()
+        public IActionResult pruebas()
         {
             return View();
         }
