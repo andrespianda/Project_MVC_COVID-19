@@ -10,26 +10,26 @@
 
 <div class="card">
   <div class="card-header" align="left">
-    Datos Personales
+    Datosgd Personale
   </div>
   <div class="card-body">
 
  <form>
 
-    <div asp-validation-summary="ModelOnly" class="form-row">
+    <div asp-validation-summary="All" class="form-row">
         <div class="form-group col-md-6" align="left">
-            <label asp-for="AttentionType" for="formGroupExampleInput" >@User.Identity.Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="----">
+            <label for="formGroupExampleInput">Nombres</label>
+            <input asp-for="Nombres" type="text" class="form-control" id="formGroupExampleInput" placeholder="----">
         </div>
         <div class="form-group col-md-6" align="left">
             <label for="formGroupExampleInput">Apellidos</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="-----">
+            <input type="text" class="form-control" asp-for="Apellidos" id="formGroupExampleInput" placeholder="-----">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-2 ">
-            <label for="inputState">Tipo Id</label>
-            <select id="inputState" class="form-control">
+            <label asp-for ="Tipo_Id">Tipo Id</label>
+            <select id="inputState" asp-for="Tipo_Id" class="form-control">
                 <option selected>...</option>                                
                 <option>RC - Registro Civil</option>
                 <option>TI - Tarjeta de identidad</option>
@@ -43,7 +43,7 @@
         </div>
         <div class="form-group col-md-10">
             <label for="formGroupExampleInput2">Identificacion</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="---">
+            <input asp-for="NIdentificacion" type="text" class="form-control" id="formGroupExampleInput2" placeholder="---">
         </div>
     </div>
     </form>
@@ -66,11 +66,11 @@
     <div class="form-row">
         <div class="form-group col-md-12" align="left">
             <label for="formGroupExampleInput" >¿Quién diligencia la encuesta?</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Capturar nombre con la sesion">
+            <input type="text" asp-for="EncargadoEncuesta" class="form-control" id="formGroupExampleInput" > 
         </div>
         <div class="form-group col-md-6" align="left">
             <label for="formGroupExampleInput">Tipo de atención</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control" asp-for="Tipo_atencion">
                 <option selected>...</option>                                
                 <option>Consulta espontánea</option>
                 <option>Consulta agendada</option>
@@ -78,7 +78,7 @@
         </div>
         <div class="form-group col-md-6" align="left">
             <label for="formGroupExampleInput">¿A qué servicio se dirige?</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control" asp-for="ServicioEncargado">
                 <option selected>...</option>                                
                 <option>Hospitalizacion</option>
                 <option>UCI</option>
@@ -113,7 +113,7 @@
                 <div class="form-group col-md-12" align="left">
                     <label for="inputState">1. ¿Ha estado en contacto estrecho (a menos de 2 metros por mas de 15 minutos) con alguna
                         persona de su entorno con diagnóstico de COVID 19 en los últimos 14 días</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas1" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -124,7 +124,7 @@
                     <label for="inputState">2. ¿Ha estado en contacto estrecho (a menos de 2 metros por mas de 15 minutos) en los
                         últimos 14 días con alguna persona de su entorno con fiebre, tos, dificultad respiratoria, diarrea, dolor de
                         garg...?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas2" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -133,7 +133,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">3. Fiebre</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas3" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -142,7 +142,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">4. Tos</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas4" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -151,7 +151,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">5. ¿Dificultad para respirar?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas5" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -160,7 +160,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">6. ¿Dolor muscular o fatiga?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas6" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -169,7 +169,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">7. ¿Dolor torácico o en el pecho?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas7" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -178,7 +178,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">8. ¿Dolor de garganta?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas8" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -187,7 +187,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">9. ¿Diarrea?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas9" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -197,7 +197,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">10. ¿Pérdida del olfato?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas10" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -206,7 +206,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">11. ¿Pérdida del gusto?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas11" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -216,7 +216,7 @@
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">12. ¿Ha estado hospitalizado durante los últimos 14 días en una institución
                         hospitalaria?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas12" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -226,7 +226,7 @@
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">13. ¿Ha sido diagnosticado positivo para COVID 19? Si la respuesta es afirmativa, por favor
                         registre Fecha de diagnóstico y fecha de la Prueba de control, en el campo Observaciones?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas13" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -235,7 +235,7 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">14. ¿En caso de haber presentado la enfermedad, ¿Sigue usted en cuarentena?</label>
-                    <select id="inputState" class="form-control col-md-1">
+                    <select asp-for="sintomas14" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
                         <option>Si</option>
                         <option>No</option>
@@ -244,11 +244,13 @@
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label for="inputState">15. Observaciones</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea asp-for="sintomas15"class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 
                     </select>
                 </div>
-
+            <div class="form-group">
+                <input type="submit" value="Confirmar" class="btn btn-primary" />
+            </div>
 
 
 

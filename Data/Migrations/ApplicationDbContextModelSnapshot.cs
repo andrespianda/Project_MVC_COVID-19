@@ -150,7 +150,7 @@ namespace Project_COVID_19.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("AttentionType")
+                    b.Property<string>("Tipo_atencion")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -158,55 +158,82 @@ namespace Project_COVID_19.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("TEXT");
+                    //b.Property<DateTime>("Date")
+                      //  .HasColumnType("TEXT");
 
-                    b.Property<bool>("EighthAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("EleventhAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("FifthAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("FirstAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("FourteenthAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("FourthAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("NinthAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("SecondAnswer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ServiceType")
+                    b.Property<string>("sintomas1")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("SixthAnswer")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("sintomas2")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<bool>("TenthAnswer")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("sintomas3")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<bool>("ThirdAnswer")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("sintomas4")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<bool>("ThirteenthAnswer")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("sintomas5")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<bool>("TwelfthAnswer")
-                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("sintomas6")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas7")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas8")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas9")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas10")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas11")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas12")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas13")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas14")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+
+                    b.Property<string>("sintomas15")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Survey");
+                    b.ToTable("Encuesta");
                 });
 
             modelBuilder.Entity("Project_COVID_19.Models.User", b =>
