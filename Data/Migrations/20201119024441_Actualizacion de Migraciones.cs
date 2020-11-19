@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Project_COVID_19.Migrations
+namespace Project_COVID_19.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class ActualizaciondeMigraciones : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,10 +40,10 @@ namespace Project_COVID_19.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(maxLength: 80, nullable: false),
-                    LastName = table.Column<string>(maxLength: 80, nullable: false),
-                    IdType = table.Column<string>(nullable: false),
-                    Identification = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    IdType = table.Column<string>(nullable: true),
+                    Identification = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,7 +51,7 @@ namespace Project_COVID_19.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Encuesta",
+                name: "Survey",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -78,8 +78,7 @@ namespace Project_COVID_19.Migrations
                     sintomas12 = table.Column<char>(nullable: false),
                     sintomas13 = table.Column<char>(nullable: false),
                     sintomas14 = table.Column<char>(nullable: false),
-                    sintomas15 = table.Column<char>(nullable: false),
-
+                    sintomas15 = table.Column<string>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

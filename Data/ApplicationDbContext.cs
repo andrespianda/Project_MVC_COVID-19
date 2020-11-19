@@ -15,5 +15,6 @@ namespace Project_COVID_19.Data
         }
 
         public DbSet<Survey> Survey { get; set; }
+        
     }
 }

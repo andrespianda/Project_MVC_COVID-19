@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_COVID_19.Data;
 
-namespace Project_COVID_19.Migrations
+namespace Project_COVID_19.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -150,90 +150,90 @@ namespace Project_COVID_19.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EncargadoEncuesta")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NIdentificacion")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nombres")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ServicioEncargado")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Tipo_Id")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Tipo_atencion")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Comment")
-                        .IsRequired()
+                    b.Property<char>("sintomas1")
                         .HasColumnType("TEXT");
 
-                    //b.Property<DateTime>("Date")
-                      //  .HasColumnType("TEXT");
-
-                    b.Property<string>("sintomas1")
-                        .IsRequired()
+                    b.Property<char>("sintomas10")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("sintomas2")
-                        .IsRequired()
+                    b.Property<char>("sintomas11")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("sintomas3")
-                        .IsRequired()
+                    b.Property<char>("sintomas12")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("sintomas4")
-                        .IsRequired()
+                    b.Property<char>("sintomas13")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("sintomas5")
-                        .IsRequired()
+                    b.Property<char>("sintomas14")
                         .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas6")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas7")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas8")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas9")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas10")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas11")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas12")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas13")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-
-                    b.Property<string>("sintomas14")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
 
                     b.Property<string>("sintomas15")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<char>("sintomas2")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas3")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas4")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas5")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas6")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas7")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas8")
+                        .HasColumnType("TEXT");
+
+                    b.Property<char>("sintomas9")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("tipo_servicio")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Encuesta");
+                    b.ToTable("Survey");
                 });
 
             modelBuilder.Entity("Project_COVID_19.Models.User", b =>
@@ -256,17 +256,13 @@ namespace Project_COVID_19.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("IdType")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Identification")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(80);
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("INTEGER");
@@ -275,9 +271,7 @@ namespace Project_COVID_19.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasMaxLength(80);
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("NormalizedEmail")
                         .HasColumnType("TEXT")
