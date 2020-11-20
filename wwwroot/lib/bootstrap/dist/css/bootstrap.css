@@ -60,7 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: rgb(223, 99, 99);
 }
 
 [tabindex="-1"]:focus {
@@ -159,7 +159,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: #1467c0;
   text-decoration: underline;
 }
 
