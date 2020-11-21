@@ -24,7 +24,7 @@ namespace Project_COVID_19.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
-            return RedirectToAction("index", "home");
+            return RedirectToAction("principal", "home");
         }
 
         [HttpGet]
