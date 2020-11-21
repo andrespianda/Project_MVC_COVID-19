@@ -1,35 +1,22 @@
-@model RegisterModel
-<div class="container rounded bg-white mt-5">
-    <div class="row">
-        <div class="col-md-4 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="imagenes/img.png" width="90"><span class="font-weight-bold"></span><span class="text-black-50"></span><span></span></div>
-        </div>
-        <div class="col-md-8">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div class="d-flex flex-row align-items-center back"><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
-                        <h6>Bienvenido Registrate</h6>
-                    </div>
-                    <h6 class="text-right">Registrate</h6>
+<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+-->
+<div class="row">
+    <div class="col-sm-4 text-center abc">
+        <!-- Default form login -->
+        <form action="#!">
+            <p class="h4 mb-4 text-left">Ingresa o Registrate</p>
+            <p class="text-left">Crea tu cuenta</p> <!-- Email --> <label for="mail" class="in">USUARIO</label> <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Enter Username"> <!-- Password --> <label for="pass" class="in">CONTRASEÑA</label> <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Enter Password">
+            <div class="d-flex justify-content-left">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox text-left"> <input type="checkbox" class="custom-control-input"> <label class="custom-control-label" for="defaultLoginFormRemember">USUARIO</label> </div>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Nombres Completos" value="nombres completos"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" value="Doe" placeholder="Doe"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Correo Electronico" value="email"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" value="+19685969668" placeholder="Phone number"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="celular" value="11111111111111"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" value="USA" placeholder="Country"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="" value="Bank of America"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" value="043958409584095" placeholder="Account Number"></div>
-                </div>
-                <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Guardar </button></div>
-            </div>
-        </div>
+            </div> <!-- Sign in button --> <button class="btn btn-info btn-block " type="submit" style="background-image: url(https://i.imgur.com/6YuRxJA.png)">INGRESAR</button> <button class="btn btn-info btn-block my" type="submit">SE TE OLVIDO LA CONTRASEÑA?</button>
+        </form>
+    </div>
+    <div class="col-sm-8 xyz text-center" style="background-image: url(https://i.imgur.com/6YuRxJA.png)"> <i class="fa fa-user-circle fa-5x" aria-hidden="true"></i>
+        <h2 class="account-text">Crea Tu cuenta</h2>
+        <h4 class="account-description">Para ingresar a la encuesta debes crear tu cuenta</h4> <button class="btn btn-info btn-block sign" type="submit">SIGN UP</button>
     </div>
 </div>
