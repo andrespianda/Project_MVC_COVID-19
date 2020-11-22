@@ -80,7 +80,7 @@ namespace Project_COVID_19.Models
                 [Required]                
         public string sintomas15 { get; set; }
 
-        [DataType(DataType.Date), Required]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }  
 
    

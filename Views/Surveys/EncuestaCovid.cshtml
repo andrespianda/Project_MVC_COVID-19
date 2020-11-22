@@ -7,14 +7,23 @@
 <div class="text-center">
     <h1 class="display-4">Encuesta</h1>
     
-
+<form asp-action ="EncuestaCovid">
+        <div align="left">
+            <label asp-for="Nombres">aqui est escondido</label>
+            <input type="hidden" asp-for="tipo_servicio" value="x" class="form-control">
+        </div>
+                    <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
 <div class="card">
   <div class="card-header" align="left">
     Datos Personales
   </div>
   <div class="card-body">
 
- <form asp-action ="EncuestaCovid">
+ 
 
     <div asp-validation-summary="All" class="form-row">
         <div class="form-group col-md-6" align="left">
@@ -25,19 +34,20 @@
             <label asp-for="Apellidos">Apellidos</label>
             <input  class="form-control" asp-for="Apellidos" placeholder="-----">
         </div>
+
     </div>
     <div class="form-row">
         <div class="form-group col-md-2 ">
             <label asp-for ="Tipo_Id">Tipo Id</label>
             <select asp-for="Tipo_Id" class="form-control">
                 <option selected>...</option>                                
-                <option>RC - Registro Civil</option>
-                <option>TI - Tarjeta de identidad</option>
-                <option>CC - Cédula de ciudadanía</option>
-                <option>CE - Cédula de extranjería</option>
-                <option>PA - Pasaporte</option>
-                <option>MS - Menor sin identificación</option>
-                <option>AS - Adulto sin identidad</option>
+                <option value="RC">RC - Registro Civil</option>
+                <option value="TI">TI - Tarjeta de identidad</option>
+                <option value="CC">CC - Cédula de ciudadanía</option>
+                <option value="CE">CE - Cédula de extranjería</option>
+                <option value="PA">PA - Pasaporte</option>
+                <option value="MS">MS - Menor sin identificación</option>
+                <option value="AS">AS - Adulto sin identidad</option>
 
             </select>
         </div>
@@ -46,7 +56,7 @@
             <input asp-for="NIdentificacion" class="form-control" placeholder="---">
         </div>
     </div>
-    </form>
+    
 
 
   </div>
@@ -61,36 +71,36 @@
   </div>
   <div class="card-body">
 
- <form>
+ 
 
-    <div class="form-row">
+    <div asp-action ="EncuestaCovid">
         <div class="form-group col-md-12" align="left">
             <label asp-for="EncargadoEncuesta" >¿Quién diligencia la encuesta?</label>
-            <input asp-for="EncargadoEncuesta" class="form-control" > 
+            <input asp-for="EncargadoEncuesta" class="form-control" value="@User.Identity.Name"> 
         </div>
         <div class="form-group col-md-6" align="left">
-            <label for="formGroupExampleInput">Tipo de atención</label>
-            <select class="form-control" asp-for="Tipo_atencion">
-                <option selected>...</option>                                
-                <option>Consulta espontánea</option>
-                <option>Consulta agendada</option>
+            <label asp-for="Tipo_atencion">Tipo de atención</label>
+            <select asp-for="Tipo_atencion" class="form-control" >
+               <!-- <option selected>...</option>                                -->
+                <option value="Espontanea">Consulta espontánea</option>
+                <option value="Agendada">Consulta agendada</option>
             </select>
         </div>
         <div class="form-group col-md-6" align="left">
             <label asp-for="ServicioEncargado">¿A qué servicio se dirige?</label>
             <select class="form-control" asp-for="ServicioEncargado">
                 <option selected>...</option>                                
-                <option>Hospitalizacion</option>
-                <option>UCI</option>
-                <option>Consulta Externa</option>
-                <option>Urgencias</option>
-                <option>Serviciosde apoyo Dx y Terapeutico</option>
+                <option value="Hospitalizacion">Hospitalizacion</option>
+                <option value="UCI">UCI</option>
+                <option value="Consulta Externa">Consulta Externa</option>
+                <option value="Urgencias">Urgencias</option>
+                <option value="Apoyo Dx y Tx">Serviciosde apoyo Dx y Terapeutico</option>
             </select>
         </div>
 
 
     </div>
-    </form>
+    
 
 
   </div>
@@ -107,7 +117,7 @@
   </div>
   <div class="card-body">
 
-            <form method="post"> 
+            
 
 
                 <div class="form-group col-md-12" align="left">
@@ -115,8 +125,8 @@
                         persona de su entorno con diagnóstico de COVID 19 en los últimos 14 días</label>
                     <select asp-for="sintomas1" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>
                     </select>
                 </div>
                                 
@@ -126,8 +136,8 @@
                         garg...?</label>
                     <select asp-for="sintomas2" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>
                     </select>
                 </div>
                                 
@@ -135,63 +145,57 @@
                     <label asp-for="sintomas3">3. Fiebre</label>
                     <select asp-for="sintomas3" id="inputState" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas4">4. Tos</label>
                     <select asp-for="sintomas4" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas5" >5. ¿Dificultad para respirar?</label>
                     <select asp-for="sintomas5" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                         <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas6">6. ¿Dolor muscular o fatiga?</label>
                     <select asp-for="sintomas6" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>
+                                            </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas7">7. ¿Dolor torácico o en el pecho?</label>
                     <select asp-for="sintomas7" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas8">8. ¿Dolor de garganta?</label>
                     <select asp-for="sintomas8" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                         <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas9">9. ¿Diarrea?</label>
                     <select asp-for="sintomas9" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                                 
@@ -199,18 +203,16 @@
                     <label asp-for="sintomas10">10. ¿Pérdida del olfato?</label>
                     <select asp-for="sintomas10" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas11">11. ¿Pérdida del gusto?</label>
                     <select asp-for="sintomas11"  class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                         <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
@@ -218,9 +220,8 @@
                         hospitalaria?</label>
                     <select asp-for="sintomas12" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
@@ -228,18 +229,16 @@
                         registre Fecha de diagnóstico y fecha de la Prueba de control, en el campo Observaciones?</label>
                     <select asp-for="sintomas13" class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                        <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
                     <label asp-for="sintomas14">14. ¿En caso de haber presentado la enfermedad, ¿Sigue usted en cuarentena?</label>
                     <select asp-for="sintomas14"  class="form-control col-md-1">
                         <option selected>...</option>
-                        <option>Si</option>
-                        <option>No</option>
-                    </select>
+                         <option value="S">Si</option>
+                        <option value="N">No</option>                    </select>
                 </div>
                                 
                 <div class="form-group col-md-12 " align="left">
@@ -254,7 +253,7 @@
 
 
 
-            </form>
+    </form>
 
 
   </div>
