@@ -5,8 +5,8 @@
 Proyecto COVID-19 se encarga de recopilar información para la evaluación de personas con síntomas y por ende con un diagnostico confirmado de COVID-19, la aplicación muestra el comportamiento de la enfermedad en el trascurso del tiempo a través de graficas ubicadas en Home de la Pagina.
 
 ## Integrantes
--> Jessica Mazuera
--> Andres Pianda
+- > Jessica Mazuera
+- > Andres Pianda
 
 
 ## Explicación Técnica
