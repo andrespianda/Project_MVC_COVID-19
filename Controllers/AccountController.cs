@@ -35,7 +35,7 @@ namespace Project_COVID_19.Controllers
         }
 
         [AcceptVerbs("Get", "Post")]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public async Task<IActionResult> IsEmailInUse(string email)
         {
             var user = await userManager.FindByEmailAsync(email);
@@ -51,7 +51,7 @@ namespace Project_COVID_19.Controllers
         }
 
         [HttpPost]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterModel model)
         {
             if (ModelState.IsValid)
@@ -83,14 +83,14 @@ namespace Project_COVID_19.Controllers
         }
 
         [HttpGet]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginModel model, string returnUrl)
         {
             if (ModelState.IsValid)
