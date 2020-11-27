@@ -41,7 +41,7 @@ namespace Project_COVID_19
                 options.Password.RequireNonAlphanumeric = true;
                 options.Password.RequireUppercase = true;
                 options.Password.RequiredLength = 6;
-                options.Password.RequiredUniqueChars = 1;
+                //options.Password.RequiredUniqueChars = 1;
             });
 
             services.AddMvc(options => {
@@ -76,9 +76,11 @@ namespace Project_COVID_19
 
             app.UseEndpoints(endpoints =>
             {
+                
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    //pattern: "{controller=Home}/{action=principal}/{id?}");
+                    pattern: "{controller=Home}/{action=principal}");
             });
         }
     }

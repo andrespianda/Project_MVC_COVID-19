@@ -1,6 +1,263 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="text-center">
+    <h1 class="display-4">Encuesta</h1>
+    
 
-<p>PRUEBAS</p>
+<div class="card">
+  <div class="card-header" align="left">
+    Datos Personales
+  </div>
+  <div class="card-body">
+
+ <form>
+
+    <div class="form-row">
+        <div class="form-group col-md-6" align="left">
+            <label for="formGroupExampleInput" >Nombres</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="----">
+        </div>
+        <div class="form-group col-md-6" align="left">
+            <label for="formGroupExampleInput">Apellidos</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="-----">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2 ">
+            <label for="inputState">Tipo Id</label>
+            <select id="inputState" class="form-control">
+                <option selected>...</option>                                
+                <option>RC - Registro Civil</option>
+                <option>TI - Tarjeta de identidad</option>
+                <option>CC - Cédula de ciudadanía</option>
+                <option>CE - Cédula de extranjería</option>
+                <option>PA - Pasaporte</option>
+                <option>MS - Menor sin identificación</option>
+                <option>AS - Adulto sin identidad</option>
+
+            </select>
+        </div>
+        <div class="form-group col-md-10">
+            <label for="formGroupExampleInput2">Identificacion</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="---">
+        </div>
+    </div>
+    </form>
+
+
+  </div>
+</div>
+
+<hr>
+
+
+<div class="card">
+  <div class="card-header" align="left">
+    Informacion Servicio Hospitalario
+  </div>
+  <div class="card-body">
+
+ <form>
+
+    <div class="form-row">
+        <div class="form-group col-md-12" align="left">
+            <label for="formGroupExampleInput" >¿Quién diligencia la encuesta?</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Capturar nombre con la sesion">
+        </div>
+        <div class="form-group col-md-6" align="left">
+            <label for="formGroupExampleInput">Tipo de atención</label>
+            <select id="inputState" class="form-control">
+                <option selected>...</option>                                
+                <option>Consulta espontánea</option>
+                <option>Consulta agendada</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6" align="left">
+            <label for="formGroupExampleInput">¿A qué servicio se dirige?</label>
+            <select id="inputState" class="form-control">
+                <option selected>...</option>                                
+                <option>Hospitalizacion</option>
+                <option>UCI</option>
+                <option>Consulta Externa</option>
+                <option>Urgencias</option>
+                <option>Serviciosde apoyo Dx y Terapeutico</option>
+            </select>
+        </div>
+
+
+    </div>
+    </form>
+
+
+  </div>
+</div>
+
+<hr>
+
+
+
+
+<div class="card">
+  <div class="card-header" align="left">
+    Sintomas
+  </div>
+  <div class="card-body">
+
+            <form>
+
+
+                <div class="form-group col-md-12" align="left">
+                    <label for="inputState">1. ¿Ha estado en contacto estrecho (a menos de 2 metros por mas de 15 minutos) con alguna
+                        persona de su entorno con diagnóstico de COVID 19 en los últimos 14 días</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">2. ¿Ha estado en contacto estrecho (a menos de 2 metros por mas de 15 minutos) en los
+                        últimos 14 días con alguna persona de su entorno con fiebre, tos, dificultad respiratoria, diarrea, dolor de
+                        garg...?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">3. Fiebre</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">4. Tos</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">5. ¿Dificultad para respirar?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">6. ¿Dolor muscular o fatiga?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">7. ¿Dolor torácico o en el pecho?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">8. ¿Dolor de garganta?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">9. ¿Diarrea?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">10. ¿Pérdida del olfato?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">11. ¿Pérdida del gusto?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">12. ¿Ha estado hospitalizado durante los últimos 14 días en una institución
+                        hospitalaria?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">13. ¿Ha sido diagnosticado positivo para COVID 19? Si la respuesta es afirmativa, por favor
+                        registre Fecha de diagnóstico y fecha de la Prueba de control, en el campo Observaciones?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">14. ¿En caso de haber presentado la enfermedad, ¿Sigue usted en cuarentena?</label>
+                    <select id="inputState" class="form-control col-md-1">
+                        <option selected>...</option>
+                        <option>Si</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                                
+                <div class="form-group col-md-12 " align="left">
+                    <label for="inputState">15. Observaciones</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                    </select>
+                </div>
+
+
+
+
+            </form>
+
+
+  </div>
+</div>
+
+
+
+
+
+</div>

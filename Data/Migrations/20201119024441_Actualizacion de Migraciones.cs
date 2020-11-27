@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Project_COVID_19.Migrations
+namespace Project_COVID_19.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class ActualizaciondeMigraciones : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,10 +40,10 @@ namespace Project_COVID_19.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(maxLength: 80, nullable: false),
-                    LastName = table.Column<string>(maxLength: 80, nullable: false),
-                    IdType = table.Column<string>(nullable: false),
-                    Identification = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    IdType = table.Column<string>(nullable: true),
+                    Identification = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,22 +56,29 @@ namespace Project_COVID_19.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    AttentionType = table.Column<string>(nullable: false),
-                    ServiceType = table.Column<string>(nullable: false),
-                    FirstAnswer = table.Column<bool>(nullable: false),
-                    SecondAnswer = table.Column<bool>(nullable: false),
-                    ThirdAnswer = table.Column<bool>(nullable: false),
-                    FourthAnswer = table.Column<bool>(nullable: false),
-                    FifthAnswer = table.Column<bool>(nullable: false),
-                    SixthAnswer = table.Column<bool>(nullable: false),
-                    EighthAnswer = table.Column<bool>(nullable: false),
-                    NinthAnswer = table.Column<bool>(nullable: false),
-                    TenthAnswer = table.Column<bool>(nullable: false),
-                    EleventhAnswer = table.Column<bool>(nullable: false),
-                    TwelfthAnswer = table.Column<bool>(nullable: false),
-                    ThirteenthAnswer = table.Column<bool>(nullable: false),
-                    FourteenthAnswer = table.Column<bool>(nullable: false),
-                    Comment = table.Column<string>(nullable: false),
+                    Nombres = table.Column<string>(nullable: false),
+                    Apellidos = table.Column<string>(nullable: false),
+                    Tipo_Id = table.Column<string>(nullable: false),
+                    NIdentificacion = table.Column<string>(nullable: false),
+                    tipo_servicio = table.Column<string>(nullable: false),
+                    EncargadoEncuesta = table.Column<string>(nullable: false),
+                    Tipo_atencion = table.Column<string>(nullable: false),
+                    ServicioEncargado = table.Column<string>(nullable: false),
+                    sintomas1 = table.Column<char>(nullable: false),
+                    sintomas2 = table.Column<char>(nullable: false),
+                    sintomas3 = table.Column<char>(nullable: false),
+                    sintomas4 = table.Column<char>(nullable: false),
+                    sintomas5 = table.Column<char>(nullable: false),
+                    sintomas6 = table.Column<char>(nullable: false),
+                    sintomas7 = table.Column<char>(nullable: false),
+                    sintomas8 = table.Column<char>(nullable: false),
+                    sintomas9 = table.Column<char>(nullable: false),
+                    sintomas10 = table.Column<char>(nullable: false),
+                    sintomas11 = table.Column<char>(nullable: false),
+                    sintomas12 = table.Column<char>(nullable: false),
+                    sintomas13 = table.Column<char>(nullable: false),
+                    sintomas14 = table.Column<char>(nullable: false),
+                    sintomas15 = table.Column<string>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

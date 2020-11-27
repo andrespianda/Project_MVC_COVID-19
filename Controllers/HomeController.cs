@@ -30,6 +30,14 @@ namespace Project_COVID_19.Controllers
         {
             return View();
         }
+        public IActionResult pruebas()
+        {
+            return View();
+        }
+        public IActionResult principal()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

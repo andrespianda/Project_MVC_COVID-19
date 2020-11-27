@@ -47,7 +47,7 @@ namespace Project_COVID_19.Controllers
         }
 
         // GET: Surveys/Create
-        public IActionResult Create()
+        public IActionResult EncuestaCovid()
         {
             return View();
         }
@@ -56,8 +56,8 @@ namespace Project_COVID_19.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,AttentionType,ServiceType,FirstAnswer,SecondAnswer,ThirdAnswer,FourthAnswer,FifthAnswer,SixthAnswer,EighthAnswer,NinthAnswer,TenthAnswer,EleventhAnswer,TwelfthAnswer,ThirteenthAnswer,FourteenthAnswer,Comment,Date")] Survey survey)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> EncuestaCovid([Bind("Id,Nombres,Apellidos,Tipo_Id,NIdentificacion,tipo_servicio,EncargadoEncuesta,Tipo_atencion,ServicioEncargado,sintomas1,sintomas2,sintomas3,sintomas4,sintomas5,sintomas6,sintomas7,sintomas8,sintomas9,sintomas10,sintomas11,sintomas12,sintomas13,sintomas14,sintomas15")] Survey survey)
         {
             if (ModelState.IsValid)
             {

@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
+
 
 namespace Project_COVID_19.Models
 {
@@ -11,57 +11,78 @@ namespace Project_COVID_19.Models
         public int Id { get; set; }
 
         [Required]
-        public string AttentionType { get; set; }
+        public string Nombres { get; set; }
 
         [Required]
-        public string ServiceType { get; set; }
+        public string Apellidos { get; set; }
 
         [Required]
-        public bool FirstAnswer { get; set; }
+        public string Tipo_Id { get; set; }
 
         [Required]
-        public bool SecondAnswer { get; set; }
+        public string NIdentificacion { get; set; }
 
         [Required]
-        public bool ThirdAnswer { get; set; }
+        public string tipo_servicio { get; set; }        
+        
+        [Required]
+        public string EncargadoEncuesta { get; set; }
 
         [Required]
-        public bool FourthAnswer { get; set; }
+        public string Tipo_atencion { get; set; }
+
 
         [Required]
-        public bool FifthAnswer { get; set; }
+        public string ServicioEncargado { get; set; }
 
         [Required]
-        public bool SixthAnswer { get; set; }
+        public char sintomas1 { get; set; }
 
         [Required]
-        public bool EighthAnswer { get; set; }
-
-        [Required]
-        public bool NinthAnswer { get; set; }
+        public char sintomas2 { get; set; }
 
         [Required]       
-        public bool TenthAnswer { get; set; }
+        public char sintomas3 { get; set; }
 
         [Required]
-        public bool EleventhAnswer { get; set; }
+        public char sintomas4 { get; set; }
 
         [Required]
-        public bool TwelfthAnswer { get; set; }
+        public char sintomas5 { get; set; }
 
         [Required]
-        public bool ThirteenthAnswer { get; set; }
+        public char sintomas6 { get; set; }
         
         [Required]       
-        public bool FourteenthAnswer { get; set; }
+        public char sintomas7 { get; set; }
         
         [Required]                
-        public string Comment { get; set; }
+        public char sintomas8 { get; set; }
 
-        [DataType(DataType.Date), Required]
+        [Required]                
+        public char sintomas9 { get; set; }
+        
+        [Required]                
+        public char sintomas10 { get; set; }
+
+                [Required]                
+        public char sintomas11 { get; set; }
+
+                [Required]                
+        public char sintomas12 { get; set; }
+
+                [Required]                
+        public char sintomas13 { get; set; }
+
+                [Required]                
+        public char sintomas14 { get; set; }
+
+                [Required]                
+        public string sintomas15 { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }  
 
-        //[ForeignKey("")]
-        //public string UserId { get; set; }     
+   
      }
 }
