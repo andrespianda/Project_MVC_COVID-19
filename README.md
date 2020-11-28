@@ -16,3 +16,7 @@ Proyecto COVID-19 se encarga de recopilar información para la evaluación de pe
 
 ## UBICACION>>:
 1.  ```https://github.com/andrespianda/Project_MVC_COVID-19.git```
+
+
+## Videp>>:
+1.  ```https://youtu.be/RZ_lpP1DTwU```
